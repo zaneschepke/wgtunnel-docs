@@ -25,4 +25,4 @@ Additionally, many automation apps (like [Macrodroid](https://www.macrodroid.com
 
 ## Intents
 
-
+Coming soon! For now, reference this issue comment [here](https://github.com/zaneschepke/wgtunnel/issues/44#issuecomment-1773890867) for intent configuration details. 
