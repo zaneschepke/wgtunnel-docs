@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="hi"
+                 name="WG Tunnel docs"
+                 start-page="Overview.md">
+
+    <toc-element topic="Overview.md"/>
+    <toc-element topic="Features.md"/>
+    <toc-element topic="Integrations.md"/>
+    <toc-element topic="FAQ.md"/>
+    <toc-element topic="PrivacyPolicy.md"/>
+</instance-profile>
