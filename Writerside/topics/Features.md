@@ -58,7 +58,7 @@ This feature will automatically restart the auto-tunneling service on boot if th
 
 <note>
     <p>
-        It can sometimes take up to a few minutes after boot for the service be started by Android.
+        It can sometimes take up to a few minutes after boot to start the service.
     </p>
 </note>
 
