@@ -15,6 +15,8 @@ These factors sparked the creation of <a href="https://github.com/zaneschepke/wg
 
 A definition list or a glossary:
 
-primary tunnel
-: This is the designated default tunnel config (denoted by a star in the app) that is toggled by features like auto-tunneling, app shortcuts, always-on VPN, and the quicktile setting.
+- <tooltip term="primary_tunnel">Primary tunnel</tooltip>
+- <tooltip term="wakelock">Wakelock</tooltip>
+
+
 

@@ -5,7 +5,7 @@ This sections details the integration options available for %product%.
 ## App Shortcuts
 
 %product% supports two [static shortcuts](https://developer.android.com/develop/ui/views/launch/shortcuts/creating-shortcuts#static) for 
-controlling the <tooltip term="primary tunnel">primary tunnel</tooltip>. 
+controlling the <tooltip term="primary_tunnel">primary tunnel</tooltip>. 
 
 <procedure title="Using shortcuts" id="inject-a-procedure">
     <step>
@@ -20,7 +20,6 @@ controlling the <tooltip term="primary tunnel">primary tunnel</tooltip>.
 These shortcut buttons can also be dragged to a screen for easier access. 
 
 Additionally, many automation apps (like [Macrodroid](https://www.macrodroid.com/)) are able to integrate with and activate these shortcuts.
-
 
 
 ## Intents

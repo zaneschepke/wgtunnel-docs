@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE terms SYSTEM "https://resources.jetbrains.com/writerside/1.0/glossary.dtd">
 <terms>
-    <term name="primary tunnel">This is the designated default tunnel config that is denoted by a star in the app.</term>
+    <term name="primary_tunnel">This is the designated default tunnel config denoted by a star in the app.</term>
+    <term name="wakelock">The ability to keep the CPU of the Android device running even after the phone has been put to sleep.</term>
 </terms>

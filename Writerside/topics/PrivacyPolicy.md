@@ -1,8 +1,5 @@
 # Privacy Policy
 
-Privacy Policy
-==============
-
 WG Tunnel provides an alternative Android client app for network tunnels using the WireGuard Protocol.
 
 Information you provide
@@ -17,7 +14,7 @@ Background Location
 
 This application does collect location information (specifically Wi-Fi ssid name) in the background
 for the auto tunnel feature. This information is not stored or transmitted but is simple collected
-by the app to determine whether or not to turn on the VPN.
+by the app to determine whether to turn on the VPN.
 
 Updates to this document
 ------------------------
@@ -33,4 +30,3 @@ zanecschepke@gmail.com or Discord (invite link on this repository).
 
 
 Effective as of May 24, 2023
-Updated May 24, 2023
