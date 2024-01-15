@@ -1,6 +1,6 @@
 # Integrations
 
-This sections details the integration options available for %product%.
+This section details the integration options available for %product%.
 
 ## App Shortcuts
 

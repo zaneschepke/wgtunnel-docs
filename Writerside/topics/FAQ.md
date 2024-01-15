@@ -1,6 +1,6 @@
 # FAQ
 
-This sections details commonly asked questions and the answers to those questions.
+This section details commonly asked questions and the answers to those questions.
 
 ### Is %product% supported on AndroidTV?
 
@@ -10,7 +10,8 @@ for AndroidTV. This can result is a somewhat clunky user experience.
 ### How do I add a tunnel?
 
 To add a tunnel, you need either a WireGuard server or a VPN Provider that allows you to export
-tunnel configs for third party apps. This will be in the form of a `.conf` file or a QR code.
+tunnel configs for third party apps.
+This will commonly be in the form of a <path>.conf</path> file or a QR code.
 
 ### Does %product% work with Android Auto? 
 
@@ -20,7 +21,18 @@ For more information on how to do this, see the [Split Tunneling](Features.md#sp
 while still tunneling the app traffic for all of your other apps. 
 
 
-### Why are some feature not available for AndroidTV? {id="tv-features-faq"}
+### Why are some features not available for AndroidTV? {id="tv-features-faq"}
 
 Unfortunately, AndroidTV does not have all the same API and security features as Android mobile. 
 For this reason, some features are disabled for AndroidTV.
+
+### Why does %product% require location permissions for auto-tunneling? 
+
+Android has deemed Wi-Fi SSIDs as precise location information. 
+In order for %product% to read the SSID from the system, it must have these permissions.
+
+<note>
+    <p>
+        This permission is only required if you enable <em>Tunnel on untrusted wifi</em> in the auto-tunneling settings.
+    </p>
+</note>
