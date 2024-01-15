@@ -54,6 +54,28 @@ There are three auto-tunneling modes that can be used in combination or individu
    - <emphasis>Common use case:</emphasis> Disable the tunnel on my home (trusted) network, 
    but enable it when I connect to any public Wi-Fi network.
 
+## Auto-tunneling override
+
+Auto-tunnel override is a feature of %product% that allows users to temporarily 
+pause (override) [auto-tunneling](#auto-tunneling) to toggle a tunnel.
+
+The status of the override can be viewed on the main screen of the app when [auto-tunneling](#auto-tunneling) is enabled.
+
+<img src="override.png" alt="override" border-effect="line"/>
+
+There are two statuses:
+- <control>active</control>: [auto-tunneling](#auto-tunneling) is active and controlling tunnel state
+- <control>paused</control>: [auto-tunneling](#auto-tunneling) is paused by the user who can now toggle tunnels freely without fully turning off [auto-tunneling](#auto-tunneling) from the settings screen.
+
+This feature can be activated three different ways:
+
+1. Clicking the <emphasis>pause</emphasis> button from the main screen
+2. Toggling a tunnel via [quick tile](#quick-tile-settings)
+3. Toggling a tunnel via [shortcut/intent](Integrations.md)
+
+It is common for users to need to manually toggle a tunnel quickly in certain situations when auto-tunneling is active. 
+This temporary override was created to meet this need.
+
 ## Split tunneling {collapsible="true"} {id="split"}
 
 Split tunneling is a feature that allows a user to route only selected app's traffic through the tunnel.
@@ -82,10 +104,26 @@ This feature shortens the wakelock timer for %product% to prevent it from draini
 - Timer without battery saver: 30-minutes
 
 
+## Tunnel statistics
+
+Clicking on a tunnel while it is running will show per peer tunnel statistics including:
+- Rx in MB
+- Tx in MB
+- Last successful handshake in seconds
+- First characters of peer public key
+
+<img src="statistics.png" alt="statistics" border-effect="line"/>
+
 ## Quick tile settings
 
+Quick tile settings is a feature of %product% that allows users to quickly control and
+see the status of the active tunnel without opening the app. 
 
+<img src="quick-tile.png" alt="quick-tile" border-effect="line"/>
 
+Even if [auto-tunneling](#auto-tunneling) is enabled,
+toggling the quick tile will temporarily disable [auto-tunneling](#auto-tunneling) via the
+[auto-tunneling override](#auto-tunneling-override) feature to allow users to temporarily turn the tunnel on or off.
 
 ## Always-on VPN  {id="always-on-feature"}
 
