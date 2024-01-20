@@ -35,7 +35,7 @@ and clicking the <emphasis>star icon</emphasis>.
 <note>
     <p>
         Setting a <tooltip term="primary_tunnel">primary tunnel</tooltip> is not strictly required
-as the app will automatically select a default tunnel if one does not already exist
+as the app will automatically select a default tunnel if one does not already exist.
 Additionally, <a anchor="always-on-feature">Always-On VPN</a> is disabled in this mode to prevent conflicts.
     </p>
 </note>

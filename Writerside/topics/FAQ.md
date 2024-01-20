@@ -36,3 +36,13 @@ In order for %product% to read the SSID from the system, it must have these perm
         This permission is only required if you enable <em>Tunnel on untrusted wifi</em> in the auto-tunneling settings.
     </p>
 </note>
+
+### How do I exclude my local network from the tunnel so I can access my local services and devices?
+
+There is a handy tool
+that exists
+for properly generating the allowedIps configuration [here](https://www.procustodibus.com/blog/2021/03/wireguard-allowedips-calculator/). 
+
+Once you add the address block(s) to be ingored by the tunnel, 
+generate the allowedIps list and paste the output to the allowIps field on your tunnel config.   
+
