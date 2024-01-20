@@ -13,7 +13,7 @@ Background Location
 ------------------------
 
 This application does collect location information (specifically Wi-Fi ssid name) in the background
-for the auto tunnel feature. This information is not stored or transmitted but is simple collected
+for the auto tunnel feature. This information is not stored or transmitted but is simply collected
 by the app to determine whether to turn on the VPN.
 
 Updates to this document

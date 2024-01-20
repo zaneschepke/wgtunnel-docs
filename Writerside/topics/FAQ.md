@@ -5,7 +5,7 @@ This section details commonly asked questions and the answers to those questions
 ### Is %product% supported on AndroidTV?
 
 Yes, the app is generally supported on AndroidTV, however, it was never designed
-for AndroidTV. This can result is a somewhat clunky user experience. 
+for AndroidTV. This can result in a somewhat clunky user experience. 
 
 ### How do I add a tunnel?
 
