@@ -85,6 +85,15 @@ A common use-case could be
 that a user wants apps that only function in another country
 to be tunneled to a VPN server in that country while all other apps use the normal network.
 
+To configure split tunneling: 
+
+1. Long press on a tunnel config to show options
+2. Press the pencil icon to get to the edit config screen
+3. At the bottom of the Interface section is a <emphasis>Tunneling apps</emphasis> to open the tunneling apps selection dialog.
+4. Select which apps to either include or exclude from the tunnel
+5. Click <emphasis>Done</emphasis>
+6. Click the floating action button to save
+
 ## Auto restart on boot
 
 Auto start on boot is automatically enabled when a user enables auto-tunneling.
