@@ -7,6 +7,12 @@ This section details commonly asked questions and the answers to those questions
 Yes, the app is generally supported on AndroidTV, however, it was never designed
 for AndroidTV. This can result in a somewhat clunky user experience. 
 
+<warning>
+    <p>
+        Amazon's FireTV is no longer supported by %product%. See <a href="#firetv-faq">here</a> for details.
+    </p>
+</warning>
+
 ### How do I add a tunnel?
 
 To add a tunnel, you need either a WireGuard server or a VPN Provider that allows you to export
@@ -25,6 +31,20 @@ while still tunneling the app traffic for all of your other apps.
 
 Unfortunately, AndroidTV does not have all the same API and security features as Android mobile. 
 For this reason, some features are disabled for AndroidTV.
+
+### Do %product% support Amazon's FireTV? {id="firetv-faq"}
+
+There is an older version of the app on the Amazon App Store, but it is no longer supported. 
+It became clear that supporting the FireTV was going to be impossible for two main reasons:
+
+1. FireTV's broken file selector API. The only way around to this is to reinvent the wheel and build a custom file selector UI from scratch.
+2. Poorly implemented developer portal with almost no support, a painful review process, and zero CI for apps.
+
+That being said, the app can still be side-loaded on a FireTV. 
+The app will likely work. 
+As for broken file selector,
+I have heard reports that an app called [Android TV ADB Maus](https://play.google.com/store/apps/details?id=svarzee.android.apps.adb_mouse&amp;hl=en_US&amp;gl=US)
+allows for navigation of the file selector screen and import configs.
 
 ### Why does %product% require location permissions for auto-tunneling? 
 
