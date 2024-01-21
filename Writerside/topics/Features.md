@@ -159,7 +159,7 @@ This has some performance benefits, but it has been known to be less reliable th
 
 <seealso>
     <category ref="wrs">
-        <a href="https://github.com/zaneschepke/wgtunnel">Github project</a>
+        <a href="https://github.com/zaneschepke/wgtunnel">GitHub project</a>
         <a href="https://github.com/zaneschepke/wgtunnel/releases">Changelog</a>
     </category>
 </seealso>

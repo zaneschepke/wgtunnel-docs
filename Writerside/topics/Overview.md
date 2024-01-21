@@ -18,5 +18,12 @@ A definition list or a glossary:
 - <tooltip term="primary_tunnel">Primary tunnel</tooltip>
 - <tooltip term="wakelock">Wakelock</tooltip>
 
+<seealso>
+    <category ref="wrs">
+        <a href="https://github.com/zaneschepke/wgtunnel">GitHub project</a>
+        <a href="https://github.com/zaneschepke/wgtunnel/releases">Changelog</a>
+    </category>
+</seealso>
+
 
 

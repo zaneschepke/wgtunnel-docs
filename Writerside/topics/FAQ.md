@@ -46,3 +46,9 @@ for properly generating the allowedIps configuration [here](https://www.procusto
 Once you add the address block(s) to be ingored by the tunnel, 
 generate the allowedIps list and paste the output to the allowIps field on your tunnel config.   
 
+<seealso>
+    <category ref="wrs">
+        <a href="https://github.com/zaneschepke/wgtunnel">GitHub project</a>
+        <a href="https://github.com/zaneschepke/wgtunnel/releases">Changelog</a>
+    </category>
+</seealso>
