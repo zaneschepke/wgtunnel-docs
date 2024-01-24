@@ -37,8 +37,9 @@ For this reason, some features are disabled for AndroidTV.
 There is an older version of the app on the Amazon App Store, but it is no longer supported. 
 It became clear that supporting the FireTV was going to be impossible for two main reasons:
 
-1. FireTV's broken file selector API. The only way around to this is to reinvent the wheel and build a custom file selector UI from scratch.
-2. Poorly implemented developer portal with almost no support, a painful review process, and zero CI for apps.
+1. FireTV's broken file selector API (The only way around to this is to reinvent the wheel and build a custom file selector UI from scratch)
+2. No way to emulate their devices for testing
+3. Poorly implemented developer portal with almost no support, a painful review process, and zero CI for apps
 
 That being said, the app can still be side-loaded on a FireTV. 
 The app will likely work. 
