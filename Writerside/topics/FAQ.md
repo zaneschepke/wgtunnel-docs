@@ -32,14 +32,14 @@ while still tunneling the app traffic for all of your other apps.
 Unfortunately, AndroidTV does not have all the same API and security features as Android mobile. 
 For this reason, some features are disabled for AndroidTV.
 
-### Do %product% support Amazon's FireTV? {id="firetv-faq"}
+### Does %product% support Amazon's FireTV? {id="firetv-faq"}
 
 There is an older version of the app on the Amazon App Store, but it is no longer supported. 
-It became clear that supporting the FireTV was going to be impossible for two main reasons:
+It became clear that supporting the FireTV was going to be impossible for three main reasons:
 
-1. FireTV's broken file selector API (The only way around to this is to reinvent the wheel and build a custom file selector UI from scratch)
-2. No way to emulate their devices for testing
-3. Poorly implemented developer portal with almost no support, a painful review process, and zero CI for apps
+1. FireTV's broken file selector API (The only way around to this is to reinvent the wheel and build a custom file selector UI from scratch).
+2. No way to emulate their devices for testing.
+3. Poorly implemented developer portal with almost no support, a painful review process, and zero CD integration for apps.
 
 That being said, the app can still be side-loaded on a FireTV. 
 The app will likely work. 
