@@ -7,6 +7,7 @@
                  start-page="Overview.md">
 
     <toc-element topic="Overview.md"/>
+    <toc-element topic="Getting-started.md"/>
     <toc-element topic="Features.md"/>
     <toc-element topic="Integrations.md"/>
     <toc-element topic="FAQ.md"/>

@@ -3,4 +3,6 @@
 <terms>
     <term name="primary_tunnel">This is the designated default tunnel config denoted by a star in the app. It is the config that will be used by the quick settings tile, static shortcuts, auto-tunneling, and Always-On VPN by default.</term>
     <term name="wakelock">The ability to keep the CPU of the Android device running even after the phone has been put to sleep.</term>
+    <term name="vpn_service">A VPN service is an entity that maintains and manages VPN servers and provides connection access to users/customers (usually for a price).</term>
+    <term name="vpn_client">An application used to connect to VPN servers from a specific device and provide device level capabilities.</term>
 </terms>

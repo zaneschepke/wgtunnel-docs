@@ -13,10 +13,10 @@ These factors sparked the creation of <a href="https://github.com/zaneschepke/wg
 
 ## Glossary
 
-A definition list or a glossary:
-
 - <tooltip term="primary_tunnel">Primary tunnel</tooltip>
 - <tooltip term="wakelock">Wakelock</tooltip>
+- <tooltip term="vpn_service">VPN service</tooltip>
+- <tooltip term="vpn_client">VPN client</tooltip>
 
 <seealso>
     <category ref="wrs">

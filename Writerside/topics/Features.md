@@ -25,12 +25,12 @@ After clicking the floating action button on the main screen, the following opti
 ## Auto-tunneling
 
 Auto-tunneling is the core feature of the application. 
-It allows users to automate under which network circumstances a tunnel will activate.
+It allows users to automate which tunnel will be active under certain network circumstances.
 
 A core concept when using auto-tunneling is setting a <tooltip term="primary_tunnel">primary tunnel</tooltip>.
 
 Setting a primary tunnel can be accomplished by doing a long-press on the desired tunnel config on the main screen
-and clicking the <emphasis>star icon</emphasis>.
+and clicking the <emphasis>gear icon</emphasis>.
 
 <note>
     <p>
@@ -54,7 +54,26 @@ There are three auto-tunneling modes that can be used in combination or individu
    - <emphasis>Common use case:</emphasis> Disable the tunnel on my home (trusted) network, 
    but enable it when I connect to any public Wi-Fi network.
 
-## Auto-tunneling override
+### Auto-tunneling to a specific tunnel by wifi name and/or mobile data
+
+A common scenario is when a user wants to use a specific tunnel config when they are connected to certain networks.
+
+> For example,
+a user might want to connect to their home VPN server when they are away from home
+and then want to connect to their VPN provider's server while at home.
+
+%product% now allows users to configure each tunnel to be used on specific Wi-Fi networks and/or mobile data.
+Tunnels configured with these settings will be prioritized over the primary tunnel if the app detects a match.
+
+To configure:
+- Long press on the tunnel config you would like to configure from the main screen
+- Click the gear icon
+- Add a Wi-Fi name where you would like to prioritize using this tunnel or turn on mobile data if this is your mobile data specific tunnel.
+
+%product% auto-tunneling will now prioritize using this specific tunnel if it detects a matching network scenario. 
+
+
+### Auto-tunneling override
 
 Auto-tunnel override is a feature of %product% that allows users to temporarily 
 pause (override) [auto-tunneling](#auto-tunneling) to toggle a tunnel.
@@ -105,13 +124,32 @@ This feature will automatically restart the auto-tunneling service on boot if th
     </p>
 </note>
 
-## Battery saver (beta)
+## Restart on ping fail (beta)
 
-This feature shortens the wakelock timer for %product% to prevent it from draining the battery.
+This feature attempts to restart the tunnel if it is failing to ping your server. 
+This feature is still in beta and will likely change in the future.
 
-- Timer with battery saver: 10-minutes
-- Timer without battery saver: 30-minutes
+- Pings vpn server address on an interval: 1-minute(s)
+- Cooldown after a failed ping/restart is triggered: 60-minute(s)
 
+## Enable app lock
+
+This feature allows the user to set an app-specific pin when launching WG Tunnel. 
+
+The primary use case for this feature is 
+to serve as a parental control mechanism to prevent phone users from being able to disable auto-tunneling.
+
+To config:
+- Navigate to app settings
+- Toggle "Enable app lock"
+- Set your pin
+
+<warning>
+    <p>
+        Do not forget your pin as there is not a reset feature in the app. 
+If you forget your pin, you will have to uninstall and reinstall the app.
+    </p>
+</warning>
 
 ## Tunnel statistics
 
