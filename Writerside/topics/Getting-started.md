@@ -22,7 +22,7 @@ one of the easiest ways to get started is with a free <tooltip term="vpn_service
 - Create a new account on <a href="https://protonvpn.com/">ProtonVPN</a>'s site.
 - Follow their <a href="https://protonvpn.com/support/wireguard-configurations/">tutorial</a> on how to export a <a href="https://www.wireguard.com/">WireGuard</a> configuration file.
 - On the main screen of %product%, click the floating action button and select "Add from file or zip".
-- Navigate to your newly downloaded <a href="https://www.wireguard.com/">WireGuard</a> configuration file and select it.
+- Navigate to your newly downloaded <a href="https://www.wireguard.com/">WireGuard</a> <path>.conf</path> configuration file and select it.
 
 You are now ready to start using %product% as your Android VPN client.
 
