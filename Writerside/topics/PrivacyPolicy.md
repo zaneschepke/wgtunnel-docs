@@ -26,7 +26,7 @@ Contact Me
 ----------
 
 If you have questions about this Privacy Policy, please contact me
-zanecschepke@gmail.com or Discord (invite link on this repository).
+support@zaneschepke.com or via Telegram, Discord, or X (invite links can be found on the GitHub repository).
 
 
 Effective as of May 24, 2023
