@@ -20,7 +20,52 @@ After clicking the floating action button on the main screen, the following opti
    - This option will upload the tunnel with a randomly generated name.
 4. Create one from scratch
 
+## AmneziaWG Support
 
+%product% fully supports a fork of WireGuard called [AmneziaWG](https://docs.amnezia.org/documentation/amnezia-wg). [AmneziaWG](https://docs.amnezia.org/documentation/amnezia-wg) is based off of WireGuard,
+but adds obfuscation to WireGuard's packet signatures to prevent deep packet inspection (DPI) systems from censoring WireGuard traffic.
+
+One of the key differences (from a user perspective) between WireGuard and Amnezia is Amnezia adds additional properties to the standard WireGuard configuration format. 
+Without these properties populated, Amnezia will fall back to using standard WireGuard and the packet signature obfuscation will not be applied. 
+
+> It is important to note that Amnezia only supports userspace mode on Android and not kernel mode.
+
+### How to convert an existing WireGuard config to Amnezia
+
+1. Open the tunnel setting screen by long pressing on a tunnel and clicking the gear icon.
+2. Click the edit tunnel floating action button and select the Amnezia option.
+3. The shared WireGuard properties will already be populated. Populate the addition empty Amnezia
+properties with the follwing data:
+
+Junk packet count: 7 (can be anywhere between 1-128) \
+Junk packet minimum size: 50 (must be less than junk packet maximum size) \
+Junk packet maximum size: 1000 (must be less than 1280) \
+Init packet junk size: 0 \
+Response packet junk size: 0 \
+Init magic packet header: 1 \
+Response packet magic header: 2 \
+Underload packet magic header: 3 \
+Transport packet magic header: 4
+
+Alternatively, these values can be added to the .conf file before import:
+```
+[Interface]
+Address = ***
+PrivateKey = ***
+DNS = ***
+MTU = ***
+Jc = between 1-128
+Jmin = must be less than Jmax
+Jmax = less than 1280
+S1 = 0 
+S2 = 0 
+H1 = 1 
+H2 = 2 
+H3 = 3 
+H4 = 4 
+```
+
+When using an Amnezia server, this values will be different and should match the server values.
 
 ## Auto-tunneling
 
@@ -107,15 +152,21 @@ to be tunneled to a VPN server in that country while all other apps use the norm
 To configure split tunneling: 
 
 1. Long press on a tunnel config to show options
-2. Press the pencil icon to get to the edit config screen
-3. At the bottom of the Interface section is a <emphasis>Tunneling apps</emphasis> to open the tunneling apps selection dialog.
-4. Select which apps to either include or exclude from the tunnel
-5. Click <emphasis>Done</emphasis>
-6. Click the floating action button to save
+2. Press the gear icon to navigate to the tunnel setting screen
+3. Press the pencil floating action button to edit the tunnel config values
+4. At the bottom of the Interface section is a <emphasis>Tunneling apps</emphasis> to open the tunneling apps selection dialog.
+5. Select which apps to either include or exclude from the tunnel
+6. Click <emphasis>Done</emphasis>
+7. Click the floating action button to save
 
 ## Auto restart on boot
 
-Auto start on boot is automatically enabled when a user enables auto-tunneling.
+Auto start on boot happens automatically under the following conditions:
+
+1. Auto-tunneling enabled with auto start auto tunneling again on reboot.
+2. A tunnel was manually activated before reboot will restart that tunnel after reboot.
+3. Always-on VPN is enabled will auto start your primate tunnel on reboot.
+
 This feature will automatically restart the auto-tunneling service on boot if the phone has been shutdown or rebooted.
 
 <note>
@@ -168,9 +219,8 @@ see the status of the active tunnel without opening the app.
 
 <img src="quick-tile.png" alt="quick-tile" border-effect="line"/>
 
-Even if [auto-tunneling](#auto-tunneling) is enabled,
-toggling the quick tile will temporarily disable [auto-tunneling](#auto-tunneling) via the
-[auto-tunneling override](#auto-tunneling-override) feature to allow users to temporarily turn the tunnel on or off.
+There are two tiles available. One is for toggling the currently active and/or primary tunnel. 
+The other tile is for toggling the state of auto-tunneling from pause/resume.
 
 ## Always-on VPN  {id="always-on-feature"}
 
