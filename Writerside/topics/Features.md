@@ -165,7 +165,7 @@ Auto start on boot happens automatically under the following conditions:
 
 1. Auto-tunneling enabled with auto start auto tunneling again on reboot.
 2. A tunnel was manually activated before reboot will restart that tunnel after reboot.
-3. Always-on VPN is enabled will auto start your primate tunnel on reboot.
+3. Always-on VPN is enabled will auto start your primary tunnel on reboot.
 
 This feature will automatically restart the auto-tunneling service on boot if the phone has been shutdown or rebooted.
 
