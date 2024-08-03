@@ -37,9 +37,9 @@ Without these properties populated, Amnezia will fall back to using standard Wir
 3. The shared WireGuard properties will already be populated. Populate the addition empty Amnezia
 properties with the follwing data:
 
-Junk packet count: 7 (can be anywhere between 1-128) \
-Junk packet minimum size: 50 (must be less than junk packet maximum size) \
-Junk packet maximum size: 1000 (must be less than 1280) \
+Junk packet count: between 3-5 (can be anywhere between 1-128) \
+Junk packet minimum size: 40 \
+Junk packet maximum size: 70 \
 Init packet junk size: 0 \
 Response packet junk size: 0 \
 Init magic packet header: 1 \
@@ -54,9 +54,9 @@ Address = ***
 PrivateKey = ***
 DNS = ***
 MTU = ***
-Jc = between 1-128
-Jmin = must be less than Jmax
-Jmax = less than 1280
+Jc = 4
+Jmin = 40
+Jmax = 70
 S1 = 0 
 S2 = 0 
 H1 = 1 
@@ -64,6 +64,14 @@ H2 = 2
 H3 = 3 
 H4 = 4 
 ```
+
+<warning>
+    <p>
+      For better censorship resistance,
+optionally set S1 and S2 between 2 and 10 but this breaks WireGuard server compatibility. 
+    </p>
+</warning>
+
 
 When using an Amnezia server, this values will be different and should match the server values.
 
