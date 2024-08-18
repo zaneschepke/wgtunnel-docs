@@ -169,19 +169,34 @@ To configure split tunneling:
 
 ## Auto restart on boot
 
-Auto start on boot happens automatically under the following conditions:
+> Auto tunneling will always be restarted automatically on reboot regardless of whether this feature is enabled.
 
-1. Auto-tunneling enabled with auto start auto tunneling again on reboot.
-2. A tunnel was manually activated before reboot will restart that tunnel after reboot.
-3. Always-on VPN is enabled will auto start your primary tunnel on reboot.
+When enabled, auto start on boot will automatically start a tunnel on reboot
+in the following order of priority:
 
-This feature will automatically restart the auto-tunneling service on boot if the phone has been shutdown or rebooted.
+1. The last tunnel that was active
+2. The primary tunnel
+3. The first tunnel in the list of tunnels
 
 <note>
     <p>
-        It can sometimes take up to a few minutes after boot to start the service.
+        It can sometimes take up to a few minutes after boot to start the tunnel and/or service.
     </p>
 </note>
+
+## Auto restart on app update
+
+This feature will automatically restore your running tunnel and/or auto tunnel service after an app update has completed.
+
+## Pre/Post Up/Down Script Support
+
+> This works for all backend modes, but requires a rooted device.
+
+%product% now supports *PreUp, PostUp, PreDown, PostDown* scripts. 
+
+These can be configured as properties in a tunnel <path>.conf</path> file and imported into the app.
+
+For more details and example use cases for these scripts, see the [unofficial docs](https://github.com/pirate/wireguard-docs?tab=readme-ov-file#preup).
 
 ## Restart on ping fail (beta)
 
