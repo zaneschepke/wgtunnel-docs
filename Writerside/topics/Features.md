@@ -107,6 +107,20 @@ There are three auto-tunneling modes that can be used in combination or individu
    - <emphasis>Common use case:</emphasis> Disable the tunnel on my home (trusted) network, 
    but enable it when I connect to any public Wi-Fi network.
 
+### Trusted Wi-Fi wildcard support (prerelease, WIP)
+
+[comment]: <> (TODO improve this)
+
+The add trusted wifi feature now supports wildcards. 
+
+Allowed wildcards:
+- Use \* to allow any number of characters after or before a given string. ex. Guest* will match all Wifi names that start with guest.
+- Use ? to allow a single wildcard character. ex. Guest? will match any wifi with the name guest and one additional wildcard character.
+- Use ! to exclude or mark a wifi name as an exception. 
+Ex. 
+If I have all wifi names marked as trusted by adding a standalone * character as trusted, 
+I could add an additionally add a !Guest* wifi to exclude all wifi that start with guest from my trust all wifi wildcard setting.  
+
 ### Auto-tunneling to a specific tunnel by wifi name and/or mobile data
 
 A common scenario is when a user wants to use a specific tunnel config when they are connected to certain networks.
@@ -126,24 +140,27 @@ To configure:
 %product% auto-tunneling will now prioritize using this specific tunnel if it detects a matching network scenario. 
 
 
-### Auto-tunneling override
+### Auto-tunneling pausing
 
-Auto-tunnel override is a feature of %product% that allows users to temporarily 
-pause (override) [auto-tunneling](#auto-tunneling) to toggle a tunnel.
+Auto-tunnel pause is a feature of %product% that allows users to temporarily 
+pause [auto-tunneling](#auto-tunneling).
 
-The status of the override can be viewed on the main screen of the app when [auto-tunneling](#auto-tunneling) is enabled.
+This feature may be useful
+when a user wants
+to quickly make a change to a tunnel or quickly disable [auto-tunneling](#auto-tunneling) without completely shutting it down. 
 
-<img src="override.png" alt="override" border-effect="line"/>
+The status of the pause can be viewed on the main screen of the app when [auto-tunneling](#auto-tunneling) is enabled.
+
+<img src="override.png" alt="pause" border-effect="line"/>
 
 There are two statuses:
 - <control>active</control>: [auto-tunneling](#auto-tunneling) is active and controlling tunnel state
 - <control>paused</control>: [auto-tunneling](#auto-tunneling) is paused by the user who can now toggle tunnels freely without fully turning off [auto-tunneling](#auto-tunneling) from the settings screen.
 
-This feature can be activated three different ways:
+This feature can be activated two different ways:
 
 1. Clicking the <emphasis>pause</emphasis> button from the main screen
-2. Toggling a tunnel via [quick tile](#quick-tile-settings)
-3. Toggling a tunnel via [shortcut/intent](Integrations.md)
+2. Toggling the auto tunnel [quick tile](#quick-tile-settings)
 
 It is common for users to need to manually toggle a tunnel quickly in certain situations when auto-tunneling is active. 
 This temporary override was created to meet this need.
@@ -238,7 +255,7 @@ Clicking on a tunnel while it is running will show per peer tunnel statistics in
 ## Quick tile settings
 
 Quick tile settings is a feature of %product% that allows users to quickly control and
-see the status of the active tunnel without opening the app. 
+see the status of the active tunnel or auto tunneling without opening the app. 
 
 <img src="quick-tile.png" alt="quick-tile" border-effect="line"/>
 
