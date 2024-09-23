@@ -107,19 +107,15 @@ There are three auto-tunneling modes that can be used in combination or individu
    - <emphasis>Common use case:</emphasis> Disable the tunnel on my home (trusted) network, 
    but enable it when I connect to any public Wi-Fi network.
 
-### Trusted Wi-Fi wildcard support (prerelease, WIP)
+### Wildcard Wi-Fi name support
 
-[comment]: <> (TODO improve this)
-
-The add trusted wifi feature now supports wildcards. 
+Trusted Wi-Fi names and tunnel specific Wi-Fi name now support wildcards.
 
 Allowed wildcards:
-- Use \* to allow any number of characters after or before a given string. ex. Guest* will match all Wifi names that start with guest.
-- Use ? to allow a single wildcard character. ex. Guest? will match any wifi with the name guest and one additional wildcard character.
-- Use ! to exclude or mark a wifi name as an exception. 
-Ex. 
-If I have all wifi names marked as trusted by adding a standalone * character as trusted, 
-I could add an additionally add a !Guest* wifi to exclude all wifi that start with guest from my trust all wifi wildcard setting.  
+- Use \* to allow any number of characters after or before a given string segment. <emphasis>Example:</emphasis> "Guest*" will match all Wi-Fi names that start with Guest".
+- Use ? to allow a single wildcard character. <emphasis>Example:</emphasis> "Guest?" will match any Wi-Fi with the name "Guest" and one additional wildcard character.
+- Use ! to mark Wi-Fi name to be excluded. <emphasis>Example:</emphasis> A common use case for this flag would be to use it in combination with a "*" (all Wi-Fi names) "!Guest". This would trust all Wi-Fi names and exclude "Guest" from this trusted list. 
+
 
 ### Auto-tunneling to a specific tunnel by wifi name and/or mobile data
 
