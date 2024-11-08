@@ -111,6 +111,19 @@ There are three auto-tunneling modes that can be used in combination or individu
 
 Trusted Wi-Fi names and tunnel specific Wi-Fi name now support wildcards.
 
+<warning>
+   Using this feature requires special characters in Wi-Fi names to be escaped with a leading \
+   <ul>
+      <li>
+         . ^ $ + {} [] | ()
+      </li>
+      <li>
+         * or ? that are characters in wifi name
+      </li>
+   </ul>
+   Example: \(5G\) Wifi*
+</warning>
+
 Allowed wildcards:
 - Use \* to allow any number of characters after or before a given string segment. <emphasis>Example:</emphasis> "Guest*" will match all Wi-Fi names that start with Guest".
 - Use ? to allow a single wildcard character. <emphasis>Example:</emphasis> "Guest?" will match any Wi-Fi with the name "Guest" and one additional wildcard character.
